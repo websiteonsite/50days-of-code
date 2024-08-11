@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root {
+     --bg-color: linear-gradient(145deg, #ffffff, #e6e6e6);
+     ;
+     --text-color: #000000;
+     --input-bg: linear-gradient(145deg, #ffffff, #e6e6e6);
+     ;
+     --card-bg: linear-gradient(145deg, #ffffff, #e6e6e6);
+     ;
+     --box-shadow-light: 8px 8px 16px #666666,
+          -8px -8px 16px #ffffff;
+}
+
+body {
+     background-color: var(--bg-color);
+     color: var(--text-color);
+     font-family: 'Poppins', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     overflow: hidden;
+     margin: 0;
+     transition: background-color 0.3s, color 0.3s;
+}
+
+.user-form {
+     width: 100%;
+     max-width: 700px;
+}
+
+.user-form input {
+     width: 100%;
+     display: block;
+     background-color: var(--input-bg);
+     border: none;
+     border-radius: 10px;
+     color: #2b2b2b;
+     padding: 1rem;
+     margin-bottom: 2rem;
+     font-family: inherit;
+     font-size: 1rem;
+     box-shadow: var(--box-shadow-light);
+}
+
+.user-form input::placeholder {
+     color: #646464;
+}
+
+.user-form input:focus {
+     outline: none;
+}
+
+.card {
+     max-width: 800px;
+     background-color: var(--card-bg);
+     border-radius: 20px;
+     box-shadow: var(--box-shadow-light);
+     display: flex;
+     padding: 3rem;
+     margin: 0 1.5rem;
+}
+
+.avatar {
+     border-radius: 50%;
+     border: 10px solid #000000;
+     height: 150px;
+     width: 150px;
+     transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+     /* Add transition for smooth effect */
+}
+
+.avatar:hover {
+     transform: scale(1.1);
+     /* Scale up by 10% on hover */
+     border-color: #4285f4;
+     /* Google's theme color */
+     transform: scale(1.1);
+     box-shadow: var(--box-shadow-light);
+}
+
+
+
+.user-info {
+     color: #000000;
+     margin-left: 2rem;
+}
+
+.user-info h2 {
+     margin-top: 0;
+}
+
+.user-info ul {
+     list-style-type: none;
+     display: flex;
+     justify-content: space-between;
+     padding: 0;
+     max-width: 400px;
+}
+
+.user-info ul li {
+     display: flex;
+     align-items: center;
+}
+
+.user-info ul li strong {
+     font-size: 0.9rem;
+     margin-left: 0.5rem;
+}
+
+.repo {
+     text-decoration: none;
+     color: #000000;
+     background-color: #cecece;
+     font-size: 0.7rem;
+     padding: 0.25rem 0.5rem;
+     margin-right: 0.5rem;
+     margin-bottom: 0.5rem;
+     display: inline-block;
+}
+
+
+
+@media (max-width: 500px) {
+     .card {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .user-form {
+          max-width: 400px;
+     }
+}
